@@ -7,6 +7,8 @@ import authRoutes from './routes/authRoutes';
 import menuRoutes from './routes/menuRoutes';
 import tableRoutes from './routes/tableRoutes';
 import orderRoutes from './routes/orderRoutes';
+import billingRoutes from './routes/billingRoutes';
+import kitchenRoutes from './routes/kitchenRoutes';
 
 dotenv.config();
 
@@ -20,6 +22,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/menu', menuRoutes);
 app.use('/api/tables', tableRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/billing', billingRoutes);
+app.use('/api/kitchen', kitchenRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');

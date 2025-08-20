@@ -1,8 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
+export type Role = 'ADMIN' | 'STAFF' | 'CASHIER' | 'WAITER' | 'KITCHEN';
 export interface AuthRequest extends Request {
-  user?: { userId: number; role: 'ADMIN' | 'STAFF' };
+  user?: { userId: number; role: Role };
 }
 
 export const authenticate = (req: AuthRequest, res: Response, next: NextFunction) => {
@@ -20,13 +21,12 @@ export const authenticate = (req: AuthRequest, res: Response, next: NextFunction
   }
 };
 
-export const requireRole = (role: 'ADMIN' | 'STAFF') => {
+export const requireRole = (role: Role | Role[]) => {
+  const roles = Array.isArray(role) ? role : [role];
   return (req: AuthRequest, res: Response, next: NextFunction) => {
     if (!req.user) return res.status(401).json({ error: 'Unauthenticated' });
-    if (req.user.role !== role && req.user.role !== 'ADMIN') {
-      return res.status(403).json({ error: 'Forbidden' });
-    }
+    if (req.user.role === 'ADMIN') return next();
+    if (!roles.includes(req.user.role)) return res.status(403).json({ error: 'Forbidden' });
     next();
   };
 };
-

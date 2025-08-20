@@ -22,6 +22,9 @@ model User {
 enum Role {
   ADMIN
   STAFF
+  CASHIER
+  WAITER
+  KITCHEN
 }
 
 model MenuItem {
@@ -62,7 +65,9 @@ model Order {
 
 enum OrderStatus {
   PENDING
+  PREPARING
   SERVED
+  BILLING
   CANCELED
   PAID
 }
@@ -74,6 +79,13 @@ model OrderItem {
   menuItemId Int
   menuItem   MenuItem @relation(fields: [menuItemId], references: [id])
   quantity   Int
+  status     ItemStatus @default(NEW)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+
+enum ItemStatus {
+  NEW
+  IN_PREP
+  DONE
 }

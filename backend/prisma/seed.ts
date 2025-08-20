@@ -39,6 +39,25 @@ async function main() {
   }
 
   console.log({ adminSeeded: true, menuSeeded: true, tablesSeeded: true });
+
+  // Staff test user
+  const staffHashed = await bcrypt.hash('staff123', 10);
+  await prisma.user.upsert({
+    where: { email: 'staff@example.com' },
+    update: {},
+    create: { email: 'staff@example.com', password: staffHashed, role: 'STAFF' },
+  });
+
+  // Role-specific users
+  const users = [
+    { email: 'waiter@example.com', password: 'waiter123', role: 'WAITER' as const },
+    { email: 'kitchen@example.com', password: 'kitchen123', role: 'KITCHEN' as const },
+    { email: 'cashier@example.com', password: 'cashier123', role: 'CASHIER' as const },
+  ];
+  for (const u of users) {
+    const ph = await bcrypt.hash(u.password, 10);
+    await prisma.user.upsert({ where: { email: u.email }, update: {}, create: { email: u.email, password: ph, role: u.role } });
+  }
 }
 
 main()

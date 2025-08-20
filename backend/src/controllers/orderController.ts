@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PrismaClient, OrderStatus } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -34,12 +34,18 @@ export const createOrder = async (req: Request, res: Response) => {
 
 export const updateOrderStatus = async (req: Request, res: Response) => {
   const id = Number(req.params.id);
-  const { status } = req.body as { status: OrderStatus };
+  const { status } = req.body as { status: string };
   try {
-    const order = await prisma.order.update({ where: { id }, data: { status } });
+    const order = await prisma.order.update({ where: { id }, data: { status: status as any } });
+    if (status === 'BILLING') {
+      await prisma.table.update({ where: { id: order.tableId }, data: { status: 'BILLING' } });
+    }
+    if (status === 'PREPARING' || status === 'PENDING' || status === 'SERVED') {
+      await prisma.table.update({ where: { id: order.tableId }, data: { status: 'OCCUPIED' } });
+    }
     if (status === 'PAID' || status === 'CANCELED') {
       // Free table if no other pending orders
-      const pending = await prisma.order.count({ where: { tableId: order.tableId, status: 'PENDING' } });
+      const pending = await prisma.order.count({ where: { tableId: order.tableId, status: { in: ['PENDING', 'PREPARING', 'SERVED'] } } });
       if (pending === 0) {
         await prisma.table.update({ where: { id: order.tableId }, data: { status: 'VACANT' } });
       }
@@ -50,3 +56,20 @@ export const updateOrderStatus = async (req: Request, res: Response) => {
   }
 };
 
+export const updateOrderItemStatus = async (req: Request, res: Response) => {
+  const id = Number(req.params.itemId);
+  const { status } = req.body as { status: 'NEW' | 'IN_PREP' | 'DONE' };
+  try {
+    const item = await prisma.orderItem.update({ where: { id }, data: { status } });
+    // If all items in the order are DONE, mark order as SERVED
+    const remaining = await prisma.orderItem.count({ where: { orderId: item.orderId, status: { not: 'DONE' } } });
+    if (remaining === 0) {
+      await prisma.order.update({ where: { id: item.orderId }, data: { status: 'SERVED' } });
+    } else if (status === 'IN_PREP') {
+      await prisma.order.update({ where: { id: item.orderId }, data: { status: 'PREPARING' } });
+    }
+    res.json(item);
+  } catch (e) {
+    res.status(404).json({ error: 'Order item not found' });
+  }
+};
