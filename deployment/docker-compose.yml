@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile.backend
+    environment:
+      - JWT_SECRET=${JWT_SECRET:-changeme}
+    ports:
+      - "3001:3001"
+  web:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile.web
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+

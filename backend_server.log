@@ -1,0 +1,363 @@
+
+> backend@1.0.0 dev
+> nodemon src/index.ts
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: ts,json[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/tableController.ts(25,62): error TS2375: Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type '(Without<TableUpdateInput, TableUncheckedUpdateInput> & TableUncheckedUpdateInput) | (Without<...> & TableUpdateInput)' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'Without<TableUncheckedUpdateInput, TableUpdateInput> & TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+    Type '{ number: number | undefined; status: $Enums.TableStatus | undefined; }' is not assignable to type 'TableUpdateInput' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Types of property 'number' are incompatible.
+        Type 'number | undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+          Type 'undefined' is not assignable to type 'number | IntFieldUpdateOperationsInput'.
+
+    at createTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1820:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/abhin.a/achu/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2375 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[server]: Server is running at http://localhost:3001
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[server]: Server is running at http://localhost:3001
+Login attempt: { email: 'admin@example.com', password: 'admin123' }
+User found in DB: {
+  id: 3,
+  email: 'admin@example.com',
+  password: '$2b$10$Tu3N0vPEbin1K5oK8pK3Ku28/pA1YpX.VWm93u5oWEPuvdIyHV9pu',
+  role: 'ADMIN',
+  createdAt: 2025-08-20T10:28:08.078Z,
+  updatedAt: 2025-08-20T10:28:08.078Z
+}
+Is password valid: true
